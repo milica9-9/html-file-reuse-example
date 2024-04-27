@@ -1,0 +1,22 @@
+name: HTML File Reuse Example
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run tests and generate HTML
+        run: |
+          # Placeholder: Add your commands here to run tests and generate HTML files
+          echo "Running tests and generating HTML..."
+
+      - name: Upload HTML files as artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: html-artifacts
+          path: path/to/html/files # Placeholder: Specify the path where your HTML files are generated
